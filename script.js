@@ -18,6 +18,7 @@ async function checkweather(cityName) {
         const weather_data = await response.json();
         
         const temperatureCelsius = Math.round(weather_data.main.temp - 273.15);
+        console.log(weather_data);
         
         city.textContent = weather_data.name;
         humidity.innerHTML = `${weather_data.main.humidity}%`;
@@ -40,7 +41,7 @@ async function checkweather(cityName) {
                 weather_icon.src = "./images/snow.png";
                 break;
             default:
-                weather_icon.src = "./images/default.png"; 
+                weather_icon.src = "./images/gitdefault.png"; 
         }
 
         
